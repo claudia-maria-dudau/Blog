@@ -1,0 +1,20 @@
+/* culoare bk */
+body{
+	background-color: #F2E2D5;
+}
+
+/* titlu */
+h1{
+	padding-top: 30px;
+	text-align: center;
+}
+
+/* media */
+figure{
+	margin: 50px;
+	padding-top: 50px;
+}
+
+img.rotire{
+	transform: rotate(90deg);
+}

@@ -1,0 +1,47 @@
+nav{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+ol#meniu, ol#submeniu{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #704D46;
+}
+
+ol#meniu>li>a, #submeniu>li>a{
+	display: block;
+	overflow: hidden;
+	color: white;
+	text-align: center;
+	padding: 1vw 1.3vw;
+	text-decoration: none;
+	transition: background-color 1s;
+}
+
+ol#submeniu{
+	position: absolute;
+	display: none;
+	z-index: 1;
+}
+
+li#sm:hover #submeniu{
+	display: block;
+}
+
+li.left{
+	float: left;
+}
+
+li.right{
+	float: right;
+}
+
+li a:hover{
+	background-color: #403431;
+}
