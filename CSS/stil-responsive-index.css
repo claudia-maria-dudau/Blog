@@ -1,4 +1,10 @@
 /* large devices */
+@media screen and (min-width: 1059px) and (max-width: 1199.98px){
+	#cont{
+		display: inherit;
+	}
+}
+
 @media screen and (min-width: 992px) and (max-width: 1058.98px){
 	/* layout */
 	div#container{
@@ -7,27 +13,29 @@
 		grid-template-rows: auto auto;
 	}
 	
-	#container section{
+	#container div{
 		grid-area: 1/1/2/3;
 	}
 	
+	figure{
+		margin-top: 0vw;
+	}
+	
 	#img{
-		grid-area: 2/3/3/4;
+		grid-area: 1/3/2/4;
+		margin-top: 5vw;
 	}
 	
 	video{
-		margin-left: 1.5vw;
-		margin-bottom: 0.2vw;
+		grid-area: 2/3/3/4;
+		margin-bottom: 7.9vw;
 	}
 	
-	figure{
-		margin-top: 0px;
+	#cont{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
-	
-	figure:first-child{
-		margin-top: -7.5vw;
-	}
-	
 }
 
 /* medium devices */
@@ -37,23 +45,33 @@
 		display: grid;
 		grid-template-columns: auto auto;	
 		grid-template-rows: auto auto;
+		grid-row-gap: 3vw;
 	}
 	
-	#container section{
+	#container div{
 		grid-area: 1/1/2/3;
 	}
 	
-	#vid{
-		grid-area: 3/1/4/2;
+	figure:first-child{
+		grid-area: 2/1/3/2;
 	}
 	
 	figure{
-		margin-top: 1vw;
+		margin-top: 8vw;
+	}
+	
+	#img{
+		grid-area: 3/1/4/2;
+		margin-top: 8vw;
 	}
 	
 	/* scris */
 	html{
 		font-size: 14px;
+	}
+	
+	#cont{
+		justify-content: space-evenly;
 	}
 }
 
@@ -64,33 +82,41 @@
 		display: grid;
 		grid-template-columns: auto;	
 		grid-template-rows: auto;
-		grid-row-gap: 10vw;
+		grid-row-gap: 7vw;
 	}
 	
-	#container section{
+	#container div{
 		grid-area: 1/1/2/2;
 	}
 	
-	#vid{
-		grid-area: 4/1/5/2;
-		margin-bottom: 3.5vw;
+	#img{
+		margin-top: 5vw;
+		margin-bottom: 1vw;
 	}
-	
-	figure{
-		margin-top: 0vw;
-	}
-	
-	figure:first-child{
-		margin-top: -5vw;
-	}
-	
 	
 	video{
 		margin-bottom: 2vw;
+		margin-top: 3.6vw;
 	}
 	
 	/* scris */
 	html{
 		font-size: 12px;
+	}
+	
+	#cont{
+		justify-content: space-evenly;
+	}
+}
+
+@media screen and (max-width: 585.98px){
+	#cont{
+		justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 495.98px){
+	#cont{
+		display: inherit;
 	}
 }
