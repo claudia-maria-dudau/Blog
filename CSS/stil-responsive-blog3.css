@@ -48,20 +48,26 @@
 	
 	#container section{
 		grid-area: 1/1/2/2;
+		margin-bottom: 2.3vw;
+	}
+	
+	figure{
+		margin-bottom: 2vw;
 	}
 	
 	#vid{
 		grid-area: 4/1/5/2;
 		margin-bottom: 5.5vw;
+		margin-top: 2vw;
 	}
 	
 	video{
-		margin-top: 2vw;
+		margin-top: 4vw;
 	}
 	
 	/* scris */
 	html{
-		font-size: 12px;
+		font-size: 13px;
 	}
 	
 	h1{
