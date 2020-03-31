@@ -41,12 +41,12 @@ h1{
 
 /* media */
 img{
-	height: 15.6vw; 
-	width: 23.4vw;
+	height: /*15.6vw*/ 200px; 
+	width: /*23.4vw*/ 300px;
 }
 
 #img img{
-	height: 19.5vw;
+	height: /*19.5vw*/ 250px;
 }
 
 figure{
