@@ -4,6 +4,7 @@ nav{
 	top: 0;
 	left: 0;
 	z-index: 1;
+	font-variant: small-caps;
 }
 
 ol#meniu, ol#submeniu{
@@ -19,7 +20,7 @@ ol#meniu>li>a, #submeniu>li>a{
 	overflow: hidden;
 	color: white;
 	text-align: center;
-	padding: 1vw 1.3vw;
+	padding: 1.5vw 1.3vw;
 	text-decoration: none;
 	transition: background-color 1s;
 }
