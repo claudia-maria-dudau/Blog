@@ -8,10 +8,11 @@
 		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
 		
 		<link rel = "shortcut icon" type = "image/x-icon" href = "../Media/favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		
 		<link rel ="stylesheet" type = "text/css" href = "../CSS/stil-meniu.css">
 		<link rel ="stylesheet" type = "text/css" href = "../CSS/stil-postari.css">
-		<link rel ="stylesheet" type = "text/css" href = "../CSS/stil-responsive-postari.css">
+		<link rel ="stylesheet" type = "text/css" href = "../CSS/stil-printare.css">
 		
 		<title> Postari </title>
 	</head> 
@@ -30,7 +31,7 @@
 						</ol>
 					</li>
 					<li class = "left"> <a href = "galerie.htm">Galerie</a> </li>
-					<li class = "right"> <a href = "">Log in</a> </li>
+					<li class = "right"> <a href = ""> <i class = "fa fa-user-circle"></i>  Log in</a> </li>
 				</ol>
 			</nav>
 		</header>
@@ -39,26 +40,52 @@
 			<!-- titlu -->
 			<h1> Postari </h1>
 			
-			<!-- blog1 -->
-			<article>
-				<h2> Prima zi acasa </h2>
-				<p> Friptura a aparut in viata mea cand era doar un puiut micut si adorabil. Era un ghemotoc pufos cat palma de mic, ce se uita cu ochii mari la tot ce se intampla in jurul ei. </p>
-				<a href = "blog1.htm"> Mai mult... </a>
-			</article>
+			<div id = "container">
+				<!-- blog1 -->
+				<article>
+					<h2> Prima zi acasa </h2>
+					<hr/>
+					<p> Friptura a aparut in viata mea cand era doar un puiut micut si adorabil. Era un ghemotoc pufos cat palma de mic, ce se uita cu ochii mari la tot ce se intampla in jurul ei. </p>
+					<figure>
+						<img src = "../Media/img5.jpg" alt = "Imagine cu Fiprura mica"  title = "Friptura mica" usemap = "#map1">
+						
+						<map name = "map1">
+							<area shape = "rect" coords = "0,0,180,100" alt = "Blog 1" href = "blog1.htm">
+						</map>
+					</figure>
+					<a href = "blog1.htm"> Mai mult... </a>
+				</article>
 			
-			<!-- blog2 -->
-			<article>
-				<h2> Aparitia lui Negru </h2>
-				<p> Stiti cum e viata: te obisnuiesti si tu cu mersul lucruilor ca mai apoi sa se intample ceva care sa iti dea toata lumea peste cap. In cazul lui Friptura aceasta intamplare a fost aparitia lui Negru. </p>
-				<a href = "blog2.htm"> Mai mult... </a>
-			</article>
+				<!-- blog2 -->
+				<article>
+					<h2> Aparitia lui Negru </h2>
+					<hr/>
+					<p> Stiti cum e viata: te obisnuiesti si tu cu mersul lucruilor ca mai apoi sa se intample ceva care sa iti dea toata lumea peste cap. In cazul lui Friptura aceasta intamplare a fost aparitia lui Negru. </p>
+					<figure>
+						<img src = "../Media/img6.jpg" alt = "Imagine cu Negru mic"  title = "Negru mic usemap" usemap = "#map2">
+						
+						<map name = "map2">
+							<area shape = "rect" coords = "0,0,180,100" alt = "Blog 2" href = "blog2.htm">
+						</map>
+					</figure>
+					<a href = "blog2.htm"> Mai mult... </a>
+				</article>
 			
-			<!-- blog3 -->
-			<article>
-				<h2> Hai la joaca </h2>
-				<p> Cati dintre voi v-ati dori sa va petreceti viata dormind, mancand si jucandu-va? Ei bine, cu parere de rau va anunt ca asta este numai un vis frumos, pentru noi cel putin. Pentru Friptura si Negru, este doar o zi normala din viata lor. </p>
-				<a href = "blog3.htm"> Mai mult... </a>
-			</article>
+				<!-- blog3 -->
+				<article>
+					<h2> Hai la joaca </h2>
+					<hr/>
+					<p> Cati dintre voi v-ati dori sa va petreceti viata dormind, mancand si jucandu-va? Ei bine, cu parere de rau va anunt ca asta este numai un vis frumos, pentru noi cel putin. Pentru Friptura si Negru, este doar o zi normala din viata lor. </p>
+					<figure>
+						<img src = "../Media/img19.jpeg" alt = "Imagine cu Fiprura si Negru"  title = "Friptura & Negru" usemap = "#map3">
+					
+						<map name = "map3">
+							<area shape = "rect" coords = "0,0,180,100" alt = "Blog 3" href = "blog3.htm">
+						</map>
+					</figure>
+					<a href = "blog3.htm"> Mai mult... </a>
+				</article>
+			</div>
 		</main>
 	</body>
 </html>

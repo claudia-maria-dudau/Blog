@@ -20,7 +20,7 @@ ol#meniu>li>a, #submeniu>li>a{
 	overflow: hidden;
 	color: white;
 	text-align: center;
-	padding: 1.5vw 1.3vw;
+	padding: 2.5vh 1.25vw;
 	text-decoration: none;
 	transition: background-color 1s;
 }

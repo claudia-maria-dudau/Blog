@@ -8,7 +8,7 @@ div#container{
 	display: grid;
 	grid-template-columns: auto auto auto;	
 	grid-template-rows: auto auto auto;
-	grid-row-gap: 5vw;
+	grid-row-gap: 11.7vh;
 	place-content: space-evenly space-evenly;
 	place-items: center center;
 }
@@ -16,7 +16,7 @@ div#container{
 #container section{
 	grid-area: 1/2/4/3;
 	align-self: baseline;
-	margin-top: 3.5vw;
+	margin-top: 6vh;
 	margin-left: 2vw;
 	margin-right: 2vw;
 }
@@ -70,17 +70,17 @@ figure{
 }
 
 figure:first-child{
-	margin-top: 6.3vw;
+	margin-top: 13.8vh;
 	margin-left: 2vw;
 	margin-right: 2vw;
 }
 
 figure#img2{
-	margin-top: 8.3vw;
+	margin-top: 18.2vh;
 }
 
 figure#img1{
-	margin-bottom: 3.7vw;
+	margin-bottom: 8.2vh;
 }
 
 figcaption{
@@ -97,7 +97,7 @@ figure#img2>figcaption{
 video{
 	height: 170px; 
 	width: 300px;
-	margin-bottom: 2vw;
+	margin-bottom: 4.5vh;
 	margin-left: 2vw;
 	margin-right: 2vw;
 }

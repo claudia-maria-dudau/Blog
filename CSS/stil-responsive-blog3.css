@@ -5,7 +5,6 @@
 		display: grid;
 		grid-template-columns: auto auto auto;	
 		grid-template-rows: auto auto;
-		grid-row-gap: 0px;
 	}
 	
 	#container section{
@@ -16,17 +15,16 @@
 		grid-area: 2/3/3/4;
 	}
 	
-	video{
-		margin-bottom: -3.9vw;
-		margin-right: 2vw;
-	}
-	
 	#vid{
-		margin-right: -5vw; 
+		margin-right: -5vw;
 	}
 	
-	figure{
-		margin-top: 0px;
+	figure, figure#img{
+		margin: inherit;
+	}
+	
+	figure#img{
+		margin-right: 5vw;
 	}
 }
 
@@ -47,17 +45,12 @@
 		grid-area: 3/1/4/2;
 	}
 	
-	figure{
-		margin-top: 6.3vw;
-	}
-
-	#img{
-		margin-top: 3.3vw;
+	figure, figure#img{
+		margin: inherit;
 	}
 	
-	/* scris */
-	html{
-		font-size: 14px;
+	figure#img{
+		margin-top: -2.5vh;
 	}
 }
 
@@ -74,20 +67,22 @@
 		grid-area: 1/1/2/2;
 	}
 	
-	figure{
-		margin-top: 7.1vw;
-	}
-	
 	#vid{
 		grid-area: 4/1/5/2;
-		margin-bottom: 5.5vw;
+		margin-bottom: 4.5vh;
 	}
 	
-	video{
-		margin-top: 4vw;
+	figure, figure#img{
+		margin: inherit;
+		margin-top: 4vh;
 	}
+	
+	figure{
+		margin-top: 8.5vh;
+	}
+	
 	/* scris */
 	html{
-		font-size: 12px;
+		font-size: 14px;
 	}
 }

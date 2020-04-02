@@ -1,0 +1,15 @@
+@media print{
+	nav, figure, video, footer {
+		display: none;
+	}
+	
+	section, div{
+		margin-right: 5vw;
+		margin-left: 5vw;
+	}
+	
+	article p{
+		height: 100%;
+		background-color: #E2C1B3;
+	}
+}
