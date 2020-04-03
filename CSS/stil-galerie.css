@@ -21,8 +21,7 @@ div#flex{
 	justify-content: space-around;
 	align-items: center;
 	align-content: space-around;
-	
-}
+	}
 
 div#flex > div{
 	margin-bottom: 8.7vh;
@@ -90,6 +89,11 @@ video:first-child, video:nth-child(2), video:nth-child(3){
 video:nth-child(4), video:nth-child(5), video:last-child{
 	width: 168px;
 	height: 300px;
+}
+
+video{
+	margin-right: auto;
+	margin-left: auto;
 }
 
 /* galerie animata */

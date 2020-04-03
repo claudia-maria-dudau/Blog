@@ -1,0 +1,53 @@
+/* large devices */
+@media screen and (min-width: 992px) and (max-width: 1058.98px){
+	/* layout */
+	section{
+		width: 25%;
+	}
+}
+
+/* medium devices */
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+	/* layout */
+	section{
+		width: 35%;
+	}
+}
+
+/* small devices */
+@media screen and (min-width: 576px) and (max-width: 767.98px){
+	/* layout */
+	section{
+		width: 45%;
+	}
+	
+	/* scris */
+	html{
+		font-size: 14px;
+	}
+}
+
+/* extra small devices */
+@media screen and (min-width: 386.98px) and (max-width: 575.98px){
+	/* layout */
+	section{
+		width: 55%;
+	}
+	
+	/* scris */
+	html{
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 385.98px){
+	/* layout */
+	section{
+		width: 75%;
+	}
+	
+	/* scris */
+	html{
+		font-size: 14px;
+	}
+}

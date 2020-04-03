@@ -1,0 +1,74 @@
+/* culoare bk */
+body{
+	background-color: #F2E2D5;
+}
+
+/* layout */
+section{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20vh;
+}
+
+section{
+	background-color: #E2C1B3;
+	width: 25%;
+	border: 5px inset #704D46;
+}
+
+div{
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+}
+
+/* scris */
+html{
+	font-size: 16px;
+	font-family: "Century", sans-serif;
+}
+
+section a{
+	text-decoration: none;
+	color: black;
+	margin-bottom: 20px;
+}
+
+/* titlu */
+h1{
+	text-align: center;
+	text-shadow: 3px 3px 5px #BF8468;
+}
+
+h2{
+	text-shadow: 2px 2px 3px #BF8468;
+	text-align: center;
+	margin-bottom: unset;
+}
+
+section i{
+	padding-top: 20px;
+	text-shadow: 4px 4px 7px #BF8468;
+}
+
+/* tabel */
+tr th{
+	text-align: left;
+}
+
+tr td{
+	border: 1px solid #704D46;
+	border-radius: 25px;
+	padding: 7px;
+	color: grey;
+}
+
+table:first-child{
+	margin-bottom: 5px;
+}

@@ -82,6 +82,8 @@ figcaption{
 video{
 	height: 300px; 
 	width: 170px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 img:hover, video:hover{
