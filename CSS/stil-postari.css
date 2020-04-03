@@ -10,7 +10,7 @@ div#container{
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-content: space-around;
-	align-items: felx-start;
+	align-items: flex-start;
 	margin-left: auto;
 	margin-right: auto;
 }
