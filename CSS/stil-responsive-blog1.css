@@ -81,3 +81,10 @@
 		font-size: 14px;
 	}
 }
+
+@media screen and (max-width: 321.98px){
+	img:hover, video:hover{
+		box-shadow: none;
+		transform: none;
+	}
+}

@@ -1,3 +1,4 @@
+/* meniu derulant */
 nav{
 	width: 100%;
 	position: fixed;
@@ -20,7 +21,7 @@ ol#meniu>li>a, #submeniu>li>a{
 	overflow: hidden;
 	color: white;
 	text-align: center;
-	padding: 2.5vh 1.25vw;
+	padding: 2.5vh 1.5vw;
 	text-decoration: none;
 	transition: background-color 1s;
 }
@@ -45,4 +46,31 @@ li.right{
 
 li a:hover{
 	background-color: #403431;
+}
+
+/* footer */
+footer{
+	width: 100%;
+	position: absolute;
+	font-variant: small-caps;
+	font-size: 0.8rem;
+	margin-left: -8px;
+}
+
+footer>ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #704D46;
+}
+
+footer>ul>li>a{
+	display: block;
+	overflow: hidden;
+	color: white;
+	text-align: center;
+	padding: 1vh 1vw;
+	text-decoration: none;
+	transition: background-color 1s;
 }

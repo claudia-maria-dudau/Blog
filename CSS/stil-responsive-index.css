@@ -90,3 +90,18 @@
 		display: inherit;
 	}
 }
+
+@media screen and (max-width: 321.98px){
+	img:hover, video:hover{
+		box-shadow: none;
+		transform: none;
+	}
+	
+	img:hover{
+		transform: rotate(90deg);
+	}
+	
+	img, video{
+		transition: 0s;
+	}
+}
