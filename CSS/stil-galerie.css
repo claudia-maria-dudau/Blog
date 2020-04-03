@@ -123,7 +123,7 @@ div#derulare1, div#derulare2{
 
 div#derulare2{
 	left: -5px;
-	top: -15.5px;
+	top: -16px;
 	flex-direction: row;
 	animation-name: der2;
 	animation-duration: 28s;
