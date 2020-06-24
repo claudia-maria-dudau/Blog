@@ -1,0 +1,49 @@
+/* layout */
+section{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20vh;
+	background-color: #E2C1B3;
+	width: 25%;
+	border: 5px inset #704D46;
+}
+
+/* titlu */
+h1{
+	text-align: center;
+	text-shadow: 3px 3px 5px #BF8468;
+}
+
+section i{
+	padding-top: 20px;
+	text-shadow: 4px 4px 7px #BF8468;
+}
+
+/* form */
+section #form2{
+	color: black;
+	display: block;
+}
+
+#form2 button{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	width: 100%;
+	padding: 5px;
+}
+
+#form2 select, #form2 input{
+	margin-top: 2px;
+	margin-bottom: 2px;
+	border-radius: 12px;
+	padding: 2px;
+}
+
+/* useri */

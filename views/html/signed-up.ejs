@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "ro">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "Log in page">
+		<meta name = "author" content = "Claudia D">
+		<meta name = "keywords" content = "blog, iepuri, log-in, sign-up">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		
+		<link rel = "shortcut icon" type = "image/x-icon" href = "/media/favicon.ico">
+		<link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-meniu.css">
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-sign-up.css">
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-responsive-sign-up.css">
+
+		<script src = "/js/script-meniu.js"></script>
+		
+		<title> Signed up </title>
+	</head> 
+	
+	<body>
+		<%- include('../fragmente/header.ejs') %>
+		
+		<main>
+			<section>
+				<i class = "fa fa-user-circle" style = "font-size: 70px;"></i>
+				
+				<!-- titlu -->
+				<h1> Inregistrare efectuata! </h1>
+                
+				<!-- scris -->
+				<p> Bine ai venit <%= locals.username %>! </p>
+			</section>
+		</main>
+	</body>
+</html>

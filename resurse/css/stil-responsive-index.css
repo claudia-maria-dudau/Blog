@@ -1,0 +1,52 @@
+/* large devices */
+@media screen and (min-width: 1059px) and (max-width: 1199.98px){
+	#cont{
+		display: inherit;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1058.98px){
+	/* layout */
+	#container div{
+		grid-area: 1/1/2/3;
+	}
+
+	#muta{
+		grid-area: 1/3/2/4;
+	}
+	
+	video{
+		grid-area: 2/3/3/4;
+	}
+}
+
+/* medium devices */
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+	/* layout */
+	#container div{
+		grid-area: 1/1/2/3;
+	}
+	
+	#muta{
+		grid-area: 3/2/4/3;
+	}
+}
+
+/* small & extra small devices */
+@media screen and (max-width: 767.98px){
+	/* layout */
+	#container div{
+		grid-area: 1/1/2/2;
+	}
+
+	video{
+		margin-top: 10vh;
+		margin-bottom: 9vh;
+	}
+}
+
+@media screen and (max-width: 585.98px){
+	#cont{
+		display: inherit;
+	}
+}

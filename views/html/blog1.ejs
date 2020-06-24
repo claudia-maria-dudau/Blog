@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang = "ro">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "Prima zi a lui Friptura acasa">
+		<meta name = "author" content = "Claudia D">
+		<meta name = "keywords" content = "blog, iepuri, povestiri, Friptura, acasa">
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+		
+		<link rel = "shortcut icon" type = "image/x-icon" href = "/media/favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-meniu.css">
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-blog1.css">
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-responsive-blog1.css">
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-printare.css">
+
+		<script src = "/js/script-meniu.js"></script>
+		
+		<title> Prima zi acasa </title>
+	</head> 
+	
+	<body>
+		<%- include('../fragmente/header.ejs') %>
+		
+		<main>
+			<div id = "container">
+				<!-- poze -->
+				<figure>
+					<img src = "/media/img4.jpg" alt = "Imagine cu Friptura mica" title = "Friptura mica">
+					<figcaption> Friptura mica </figcaption>
+				</figure>
+				<video id = "vid" controls = "controls">
+					<source src = "/media/vid2.mp4" type = "video/mp4">
+					Video cu Friptura mica
+				</video>
+				
+				<!-- scris -->
+				<section>
+					<!-- titlu -->
+					<h1> ~ Prima zi acasa ~ </h1>
+					<p> Friptura a aparut in viata mea cand era doar un puiut micut si adorabil. Era un ghemotoc pufos cat palma de mic, ce se uita cu ochii mari la tot ce se intampla in jurul ei. Se putea observa dezorientarea creata de schimbarea peisajului, insa aceasta nu a durat pre mult. </p>
+					<p> Dupa numai cateva ore a inceput sa isi exploreze cusca, dandu-si repede seama ca locul ei preferat este langa castronul cu mancare.  A descoperit si ca acum are loc sa se intinda cat vrea, tot spatiul fiind la dispozitia ei. Cu toate acestea, nu s-a multumit doar cu cusca. </p>
+					<p> Dorinta de explorare a pus stapanire pe ea si, la scurt timp dupa ce s-a instalat in noua ei casa, a vrut sa descopere ce se afla si in exterior. A fost foarte creativa in a gasi modalitati de a iesi din cusca: a invatat sa deschida usa, precum si sa sara pe acoperis. Lumea se afla acum la labutele ei micute. </p>
+					<p> Dupa ce si-a petrecut timpul explorand lumea exterioara a ajuns la doua concluzii: unu, lumea este mult mai mare decat se astepta ea si doi, parca tot mai bine era langa bolul de mancare. Asa ca, dupa o zi plina si obositoare de drumetii, s-a hotarat sa se intoarca in cusca ei, pentru ca, pana la urma, nicaieri nu este mai bine ca acasa. </p>
+				</section>
+			
+				<!-- poze -->
+				<figure id = "muta">
+					<img src = "/media/img5.jpg" alt = "Imagine cu Friptura mica" title = "Friptura mica">
+					<figcaption> Friptura mica mancand </figcaption>
+				</figure>
+				<video controls = "controls">
+					<source src = "/media/vid3.mp4" type = "video/mp4">
+					Video cu Friptura mica
+				</video>
+			</div>
+		</main>
+		
+		<footer>
+			<ul>
+				<li class = "left"> <a href = "#"> <i class = "fa fa-chevron-circle-up"></i>  Top</a> </li>
+				<li class = "right"> <a href = "/blog2">Next   <i class = "fa fa-chevron-circle-right "></i></a> </li>
+			</ul>
+		</footer>
+	</body>
+</html>

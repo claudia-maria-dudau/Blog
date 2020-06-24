@@ -1,0 +1,30 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blogul oficial a lui Friptura si Negru",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudia-maria-dudau/Blog.git"
+  },
+  "keywords": [
+    "blog",
+    "iepuri"
+  ],
+  "author": "Claudia Dudau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claudia-maria-dudau/Blog/issues"
+  },
+  "homepage": "https://github.com/claudia-maria-dudau/Blog#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "formidable": "^1.2.2",
+    "nodemailer": "^6.4.10"
+  }
+}

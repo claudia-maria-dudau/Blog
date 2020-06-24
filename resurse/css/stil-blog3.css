@@ -1,0 +1,14 @@
+/* media */
+img{
+	height: 320px; 
+	width: 230px;
+}
+
+figure{
+	margin-top: 12vh;
+}
+
+video{
+	height: 290px;
+	width: 160px;
+}

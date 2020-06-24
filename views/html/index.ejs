@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang = "ro">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "Blogul celor doi iepuri ai mei: Friptura si Negru">
+		<meta name = "author" content = "Claudia D">
+		<meta name = "keywords" content = "blog, iepuri">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		
+		<link rel = "shortcut icon" type = "image/x-icon" href = "/media/favicon.ico">
+		<link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-meniu.css">
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-index.css">
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-responsive-index.css">
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-printare.css">
+		
+		<script src = "/js/script-meniu.js"></script>
+
+		<title> Friptura &amp; Negru </title>
+	</head> 
+	
+	<body>
+		<%- include('../fragmente/header.ejs') %>
+		
+		<main>
+			<div id = "container">
+				<!-- poze -->
+				<figure>
+					<img src = "/media/img2.jpg" alt = "Imagine cu Friptura" title = "Friptura">
+					<figcaption> Friptura </figcaption>
+				</figure>
+				<figure id = "muta">
+					<img src = "/media/img1.jpg" alt = "Imagine cu Friptura si Negru" title = "Friptura &amp; Negru">
+				</figure>
+			
+				<!-- scris -->
+				<div>
+					<section>
+						<!-- titlu -->
+						<h1> Friptura &amp; Negru <br/>
+						~ Un blog despre 2 iepuri dragalasi ~ </h1>
+						<p> V-ati intrebat vreodata cum ar fi viata voastra daca ati fi un iepure? Plictisitoare? Simpla? Interesanta? V-ati distra alergand pe campii sau v-ati plictisi foarte repede sa mancati numai verdeturi? </p>
+						<p> Din pacate, noi ca oameni, nu o sa putem experimenta niciodata micile placeri ale vietii de iepure, dar asta nu insemna ca nu putem sa ne bucuram de acestea cu ajutorul micutilor nostrii prieteni. Din acest motiv, blogul “Friptura & Negru” este dedicate pufosilor care ne fac vietile mai frumoase prin simpla lor prezenta. </p>
+						<p> In paginile acestui blog veti gasi intamplarile haioase a doi iepuri hazli si plini de energie, carora le place sa se joace la fel de mult cat le place mancarea. </p>
+					</section>
+					<div id = "cont">
+					<section>
+						<h2> <em> Friptura </em> </h2>
+						<ul>
+							<li> ar da orice la schimb pentru macare </li>
+							<li> vrea mereu atentie </li>
+							<li> iubeste sa fie mangaiata </li>
+						</ul>
+						<br/>
+					</section>
+					<section>
+						<h2> <em> Negru aka "Bulgur" </em> </h2>
+						<ul>
+							<li> foarte pufos </li>
+							<li> ii place sa fie iubit </li>
+							<li> nu ar rani o musca </li>
+						</ul>
+					</section>
+					</div>
+				</div>
+			
+				<!-- poze -->
+				<figure>
+					<img src = "/media/img3.jpg" alt = "Imagine cu Negru" title = "Negru">
+					<figcaption> Negru </figcaption>
+				</figure>
+				<video controls = "controls">
+					<source src = "/media/vid1.mp4" type = "video/mp4">
+					Video cu Friptura si Negru.
+				</video>
+			</div>
+		</main>
+		
+		<%- include('../fragmente/footer1.ejs') %>
+	</body>
+</html>

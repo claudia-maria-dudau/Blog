@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang = "ro">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "Galerie cu poze si videouri">
+		<meta name = "author" content = "Claudia D">
+		<meta name = "keywords" content = "blog, iepuri, galerie, poza, video">
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+		
+		<link rel = "shortcut icon" type = "image/x-icon" href = "/media/favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-meniu.css">
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-galerie.css">
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-responsive-galerie.css">
+
+		<script src = "/js/script-meniu.js"></script>
+		
+		<title> Galerie </title>
+	</head> 
+	
+	<body>
+		<%- include('../fragmente/header.ejs') %>
+		
+		<main>
+			<!-- titlu -->
+			<h1> Galerie </h1>
+			
+			<div id = "flex">
+				<!-- poze -->
+				<div id = "container1">
+					<div id = "derulare1">
+						<figure>
+							<img class = "rotire" src = "/media/img2.jpg" alt = "Imagine cu Friptura" title = "Friptura">
+							<figcaption> Friptura </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img1.jpg" alt = "Imagine cu Friptura si Negru" title = "Friptura &amp; Negru">
+							<figcaption> Friptura & Negru </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img3.jpg" alt = "Imagine cu Negru" title = "Negru">
+							<figcaption> Negru </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img7.jpg" alt = "Imagine cu Negru mic" title = "Negru mic">
+							<figcaption> Negru mic </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img8.jpg" alt = "Imagine cu Friptura di Negru" title = "Friptura & Negru">
+							<figcaption> Friptura & Negru pe casuta</figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img9.jpg" alt = "Imagine cu Friptura ascunsa" title = "Friptura ascunsa">
+							<figcaption> Friptura ascusa prin casa </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img10.jpg" alt = "Imagine cu Negru" title = "Negru in hamac">
+							<figcaption> Negru in hamac </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img11.jpg" alt = "Imagine cu Friptura" title = "Friptura">
+							<figcaption> Friptura curioasa de lumea exterioara </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img12.jpg" alt = "Imagine cu Friptura in tub" title = "Friptura in tub">
+							<figcaption> Friptura ascunsa in tub </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img13.jpg" alt = "Imagine cu Negru" title = "Negru cu frizura">
+							<figcaption> Negru cu frizura de vara </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img16.jpg" alt = "Imagine cu Negru" title = "Zoom pe Negru">
+							<figcaption> Zoom pe Negru </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img18.jpg" alt = "Imagine cu Friptura" title = "Zoom pe Friptura">
+							<figcaption> Zoom pe Friptura </figcaption>
+						</figure>
+						<figure>
+							<img class = "rotire" src = "/media/img20.jpeg" alt = "Imagine cu Friptura si Negru" title = "Friptura & Negru la mancare">
+							<figcaption> Friptura & Negru la mancare </figcaption>
+						</figure>
+					</div>
+				</div>
+			
+				<div id = "container2">
+					<div id = "derulare2">
+						<figure>
+							<img src = "/media/img4.jpg" alt = "Imagine cu Friptura mica" title = "Friptura mica">
+							<figcaption> Friptura mica </figcaption>
+						</figure>	
+						<figure>
+							<img src = "/media/img5.jpg" alt = "Imagine cu Friptura mica" title = "Friptura mica">
+							<figcaption> Friptura mica mancand </figcaption>
+						</figure>
+						<figure>
+							<img src = "/media/img6.jpg" alt = "Imagine cu Negru mic" title = "Negru mic">
+							<figcaption> Negru mic </figcaption>
+						</figure>
+						<figure>
+							<img src = "/media/img14.jpg" alt = "Imagine cu Negru" title = "Negru cu labute roz">
+							<figcaption> Negru cu labute roz </figcaption>
+						</figure>
+						<figure>
+							<img src = "/media/img15.jpg" alt = "Imagine cu Friptura si Negru de Craciun" title = "Friptura & Negru de Craciun">
+							<figcaption> Friptura & Negru de Craciun </figcaption>
+						</figure>
+						<figure>
+							<img src = "/media/img17.jpg" alt = "Imagine cu Negru" title = "Negru privit de jos">
+							<figcaption> Negrul privit de jos </figcaption>
+						</figure>
+						<figure>
+							<img src = "/media/img19.jpeg" alt = "Imagine cu Friptura si Negru" title = "Friptura & Negru">
+							<figcaption> Friptura & Negru </figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+					
+			<!-- video -->
+			<div id = "container3">
+				<video controls = "controls">
+					<source src = "/media/vid2.mp4" type = "video/mp4">
+					Video cu Friptura mica
+				</video>
+				<video controls = "controls">
+					<source src = "/media/vid3.mp4" type = "video/mp4">
+					Video cu Friptura mica
+				</video>
+				<video controls = "controls">
+					<source src = "/media/vid4.mp4" type = "video/mp4">
+					Video cu Friptura & Negru
+				</video>
+				<video controls = "controls">
+					<source src = "/media/vid1.mp4" type = "video/mp4">
+					Video cu Friptura si Negru.
+				</video>
+				<video controls = "controls">
+					<source src = "/media/vid6.mp4" type = "video/mp4">
+					Video cu Negru jucandu-se
+				</video>
+				<video controls = "controls">
+					<source src = "/media/vid5.mp4" type = "video/mp4">
+					Video cu Friptura jucandu-se
+				</video>	
+			</div>
+		</main>
+		
+		<%- include('../fragmente/footer1.ejs') %>
+	</body>
+</html>

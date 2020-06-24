@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "ro">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "Log in page">
+		<meta name = "author" content = "Claudia D">
+		<meta name = "keywords" content = "blog, iepuri, log-in, sign-up">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		
+		<link rel = "shortcut icon" type = "image/x-icon" href = "/media/favicon.ico">
+		<link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-meniu.css">
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-sign-up.css">
+		<link rel = "stylesheet" type = "text/css" href = "/css/stil-responsive-sign-up.css">
+		
+		<script src = "/js/script-meniu.js"></script>
+		
+		<title> Sign up </title>
+	</head> 
+	
+	<body>
+		<%- include('../fragmente/header.ejs') %>
+		
+		<main>
+			<section>
+				<i class = "fa fa-user-circle" style = "font-size: 70px;"></i>
+				
+				<!-- titlu -->
+				<h1> Sign up </h1>
+				
+				<!-- formular sign-up -->
+				<form id = "form2" method = "post" action = "/sign-up">
+					<label> Adresa e-mail </label> </br>
+					<input type = "text" name = "email"> </br>
+					<label> Username </label> </br>
+					<input type = "text" name = "username"> </br>
+					<label> Parola </label> </br>
+					<input type = "password" name = "parola"> </br>
+					<label> Notificari </label> </br>
+					<select name = "subscriptie">
+						<option value = "Postare" selected> La aparitia fiecarei postari </option>
+						<option value = "Saptamanal"> Saptamanal </option>
+						<option value = "Lunar"> Lunar </option>
+						<option value = "Ocazional"> Ocazional </option>
+					</select> </br>
+					<button type = "submit"> Trimite </button>
+				</form>
+			</section>
+		</main>
+
+		<%- include('../fragmente/footer1.ejs') %>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "ro">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "Log in page">
+		<meta name = "author" content = "Claudia D">
+		<meta name = "keywords" content = "blog, iepuri, log-in, sign-up">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		
+		<link rel = "shortcut icon" type = "image/x-icon" href = "/media/favicon.ico">
+		<link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel = "stylesheet" type = "text/css" href = "/css/stil-meniu.css">
+        <link rel = "stylesheet" type = "text/css" href = "/css/stil-merch.css">
+
+        <script src = "/js/script-merch.js"></script>
+        <script src = "/js/ejs.min.js"></script>
+		
+		<title> Sign up </title>
+	</head> 
+	
+	<body>
+		<%- include('../fragmente/header.ejs') %>
+		
+		<main>
+			<!-- merch -->
+            <h1> Merch </h1> 
+            <!-- aici se va afisa continutul JSON-ului cu formatul din template-ul definit in script -->
+            <div class = "afis" id = "afisTemplate"></div>
+        </main>
+        
+        <%- include('../fragmente/footer1.ejs') %>
+	</body>
+</html>

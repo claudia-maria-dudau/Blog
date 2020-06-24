@@ -1,0 +1,16 @@
+/* layout */
+div.merch_temp{
+    margin: 4.5vh 2vw;
+    padding: 5px 15px;
+    background: rgb(206, 164, 146);
+	box-shadow: 5px 10px #704D46;
+}
+
+div.merch_temp:last-child{
+    margin-bottom: 9vh;
+}
+
+/* titlu */
+h1{
+	margin-top: 10.5vh;
+}

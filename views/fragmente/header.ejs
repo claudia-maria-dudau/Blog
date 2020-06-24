@@ -1,0 +1,33 @@
+<header>
+	<!-- navigation bar -->
+	<nav>
+		<ol id = "meniu">
+			<li class = "left"> <a href = "/index">Acasa</a> </li>
+			<li class = "left" id = "sm"> <a href = "/postari">Postari</a>
+				<ol id = "submeniu">
+					<li> <a href = "/blog1">Prima zi acasa</a> </li>
+					<li> <a href = "/blog2">Aparitia lui Negru</a> </li>
+					<li> <a href = "/blog3">Hai la joaca</a> </li>
+				</ol>
+			</li>
+			<li class = "left"> <a href = "/galerie">Galerie</a> </li>
+			<li class = "left"> <a href = "/merch">Merch</a> </li>
+			<li id = "sign-up" class = "right"> <a href = "/sign-up">  Sign up</a> </li>
+			<li id = "log-in" class = "right"> <i class = "fa fa-user-circle"></i> 
+				<% if(locals.username) { %> <%= locals.username %>
+					<div id = "btn"> <a href = "/logout"> Log out </a> </div>
+				<% } else { %> Log in
+					<div id = "frm">
+						<form id = "form1" method = "post" action = "/login">
+							<label> Username </label> </br>
+						 	<input type = "text" name = "username"> </br>
+							<label > Parola </label> </br>
+							<input id = "submit" type = "password" name = "parola"> </br>
+							<button type = "submit"> Intra in cont </button>
+						</form>
+					</div>
+					<% } %>
+			</li>
+		</ol>
+    </nav>
+</header>

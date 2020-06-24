@@ -1,0 +1,59 @@
+{"merch": [
+    {
+        "nume": "Cana Model 1",
+        "descriere": "Cana cu poza lui Friptura",
+        "dimensiune": "250/500 mL",
+        "material": "ceramica",
+        "pret": "10/13 lei"
+    },
+    {
+        "nume": "Cana Model 2",
+        "descriere": "Cana cu poza lui Negru",
+        "dimensiune": "250/500 mL",
+        "material": "ceramica",
+        "pret": "10/13 lei"
+    },
+    {
+        "nume": "Cana Model 3",
+        "descriere": "Cana cu poza lui Friptura si Negru",
+        "dimensiune": "250/500 mL",
+        "material": "ceramica",
+        "pret": "15/20 lei"
+    },
+    {
+        "nume": "Tricou Model 1",
+        "descriere": "Tricou cu poza lui Friptura imprimata",
+        "marime": "XS/S/M/L/XL/XXL",
+        "material": "90% bumbat, 10% poliester",
+        "pret": "15 lei"
+    },
+    {
+        "nume": "Tricou Model 2",
+        "descriere": "Tricou cu poza lui Negru imprimata",
+        "marime": "XS/S/M/L/XL/XXL",
+        "material": "90% bumbat, 10% poliester",
+        "pret": "15 lei"
+    },
+    {
+        "nume": "Tricou Model 3",
+        "descriere": "Tricou cu poza lui Friptura si Negru imprimata",
+        "marime": "XS/S/M/L/XL/XXL",
+        "material": "90% bumbat, 10% poliester",
+        "pret": "22 lei"
+    },
+    {
+        "nume": "Zi de distractie Varianta 1",
+        "descriere": "O zi in care va puteti bucura de compania lui Friptura",
+        "pret": "35 lei"
+    },
+    {
+        "nume": "Zi de distractie Varianta 2",
+        "descriere": "O zi in care va puteti bucura de compania lui Negru",
+        "pret": "35 lei"
+    },
+    {
+        "nume": "Zi de distractie Varianta 3",
+        "descriere": "O zi in care va puteti bucura de compania lui Friptura si a lui Negru",
+        "pret": "55 lei"
+    }
+]}
