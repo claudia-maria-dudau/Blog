@@ -56,7 +56,7 @@ window.onload = function(){
 				if(i < 3){
 					textTemplate += ejs.render("<div class = 'merch_temp'>\
 					<p>Nume: <%= merch.nume %></p>\
-					<p>Descriere: <%= merch.descriere %></p>\
+					<p>Descriere: <%= merch.descriere %>*</p>\
 					<p>Dimensiune: <%= merch.dimensiune %></p>\
 					<p>Material: <%= merch.material %></p>\
 					<p>Pret: <%= merch.pret %></p>\
@@ -67,7 +67,7 @@ window.onload = function(){
 				else if(i < 6){
 					textTemplate += ejs.render("<div class = 'merch_temp'>\
 					<p>Nume: <%= merch.nume %></p>\
-					<p>Descriere: <%= merch.descriere %></p>\
+					<p>Descriere: <%= merch.descriere %>*</p>\
 					<p>Marime: <%= merch.marime %></p>\
 					<p>Material: <%= merch.material %></p>\
 					<p>Pret: <%= merch.pret %></p>\
