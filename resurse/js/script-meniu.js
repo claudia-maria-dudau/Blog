@@ -1,4 +1,4 @@
-window.onload = function(){
+function align_menu(){
     //---------------- meniu ----------------
     div_login = document.querySelector("#log-in div");
     signup = document.getElementById("sign-up");
