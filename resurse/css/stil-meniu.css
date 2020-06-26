@@ -55,6 +55,10 @@ li:hover, #btn:hover{
 	background-color: #403431;
 }
 
+.curent{
+	background-color: #403431;
+}
+
 /* formular log-in */
 #log-in div{
 	background-color: #704D46;
@@ -93,7 +97,7 @@ footer>ul{
 	background-color: #704D46;
 }
 
-footer>ul>li>a{
+footer>ul>li>a, #asc, #nr_cuv{
 	display: block;
 	overflow: hidden;
 	color: white;
@@ -172,6 +176,10 @@ img:hover, video:hover{
 
 img, video{
 	transition: all 1s linear;
+}
+
+.ascunde{
+	display: none;
 }
 
 /* ------------------------ responsive ------------------------ */

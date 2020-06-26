@@ -1,5 +1,6 @@
 window.onload = function(){
 	align_menu();
+	marcare_pg();
 
 	//---------------- template ----------------
 	//creez un obiect de tip XMLHttpRequest cu care pot transmite cereri catre server
@@ -76,5 +77,67 @@ window.onload = function(){
             
 			//adaug textul cu afisarea studentilor in container
 			container.innerHTML = textTemplate;
+	}
+
+	//---------------- sortare/filtare ----------------
+	sel_sortare = document.getElementById("sort");
+	sel_filtrare = document.getElementById("filt");
+	div_temp = document.getElementById("afisTemplate");
+	merch = document.getElementsByClassName("merch_temp");
+
+	sel_sortare.onchange = function(){
+		let merch1 = Array.prototype.slice.call(merch);
+		if(sel_sortare.options[sel_sortare.selectedIndex].value == "cresc"){
+			merch1.sort(function(a, b){
+				let p_a = a.getElementsByTagName("p");
+				let pret_a = parseInt(p_a[p_a.length - 1].innerHTML.split(" ")[1]);
+				let p_b = b.getElementsByTagName("p");
+				let pret_b = parseInt(p_b[p_b.length - 1].innerHTML.split(" ")[1])
+				return pret_a - pret_b;
+			});
+		}
+		else{
+			merch1.sort(function(a, b){
+				let p_a = a.getElementsByTagName("p");
+				let pret_a = parseInt(p_a[p_a.length - 1].innerHTML.split(" ")[1])
+				let p_b = b.getElementsByTagName("p");
+				let pret_b = parseInt(p_b[p_b.length - 1].innerHTML.split(" ")[1])
+				return pret_b - pret_a;
+			});
+		}
+
+		for(let i = 0; i < merch1.length; i++)
+			div_temp.appendChild(merch1[i]);
+	}
+
+	sel_filtrare.onchange = function(){
+		if(sel_filtrare.options[sel_filtrare.selectedIndex].value == "tot"){
+			for(let i = 0; i < merch.length; i++)
+				merch[i].classList.remove("ascunde");
+		}
+		else if(sel_filtrare.options[sel_filtrare.selectedIndex].value == "cana"){
+			for(let i = 0; i < merch.length; i++){
+				if(!merch[i].innerHTML.includes("Cana"))
+					merch[i].classList.add("ascunde");
+				else
+					merch[i].classList.remove("ascunde");
+			}
+		}
+		else if(sel_filtrare.options[sel_filtrare.selectedIndex].value == "tricou"){
+			for(let i = 0; i < merch.length; i++){
+				if(!merch[i].innerHTML.includes("Tricou"))
+					merch[i].classList.add("ascunde");
+				else
+					merch[i].classList.remove("ascunde");
+			}
+		}
+		else{
+			for(let i = 0; i < merch.length; i++){
+				if(!merch[i].innerHTML.includes("Zi"))
+					merch[i].classList.add("ascunde");
+				else
+					merch[i].classList.remove("ascunde");
+			}
+		}
 	}
 }

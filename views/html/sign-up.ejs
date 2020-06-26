@@ -15,6 +15,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "/css/stil-responsive-sign-up.css">
 		
 		<script src = "/js/script-meniu.js"></script>
+		<script src = "/js/script-sign-up.js"></script>
 		
 		<title> Sign up </title>
 	</head> 
@@ -32,11 +33,11 @@
 				<!-- formular sign-up -->
 				<form id = "form2" method = "post" action = "/sign-up">
 					<label> Adresa e-mail </label> </br>
-					<input type = "text" name = "email"> </br>
+					<input type = "text" name = "email" required> </br>
 					<label> Username </label> </br>
-					<input type = "text" name = "username"> </br>
+					<input type = "text" name = "username" required> </br>
 					<label> Parola </label> </br>
-					<input type = "password" name = "parola"> </br>
+					<input type = "password" name = "parola" required> </br>
 					<label> Notificari </label> </br>
 					<select name = "subscriptie">
 						<option value = "Postare" selected> La aparitia fiecarei postari </option>

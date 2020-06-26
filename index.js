@@ -112,7 +112,7 @@ app.post('/login', function(req, res) {
 		}
 		else{
 			console.log("User inexistent");
-			res.render("html.404");
+			res.render('html/404');
 		}
     });
 });

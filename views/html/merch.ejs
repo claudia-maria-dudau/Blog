@@ -25,7 +25,25 @@
 		
 		<main>
 			<!-- merch -->
-            <h1> Merch </h1> 
+			<h1> Merch </h1> 
+			<div id = "sortare">
+				<form method = "post" action = "/merch">
+					<label> Pret: 
+						<select id = "sort" name = "pret">
+							<option value = "cresc" selected> crescator </option>
+							<option value = "desc"> descrescator </option>
+						</select>
+					</label>
+					<label> Tip: 
+						<select id = "filt" name = "tip">
+							<option value = "tot" selected> toate produsele </option>
+							<option value = "cana"> cani </option>
+							<option value = "tricou"> tricouri </option>
+							<option value = "distractie"> zi de distractie </option>
+						</select>
+					</label>
+				</form>
+			</div>
             <!-- aici se va afisa continutul JSON-ului cu formatul din template-ul definit in script -->
             <div class = "afis" id = "afisTemplate"></div>
 			<aside><p>*Se poate alege orice poza din galeria noastra</p></aside>
