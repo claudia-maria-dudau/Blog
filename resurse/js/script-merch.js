@@ -92,16 +92,16 @@ window.onload = function(){
 				let p_a = a.getElementsByTagName("p");
 				let pret_a = parseInt(p_a[p_a.length - 1].innerHTML.split(" ")[1]);
 				let p_b = b.getElementsByTagName("p");
-				let pret_b = parseInt(p_b[p_b.length - 1].innerHTML.split(" ")[1])
+				let pret_b = parseInt(p_b[p_b.length - 1].innerHTML.split(" ")[1]);
 				return pret_a - pret_b;
 			});
 		}
 		else{
 			merch1.sort(function(a, b){
 				let p_a = a.getElementsByTagName("p");
-				let pret_a = parseInt(p_a[p_a.length - 1].innerHTML.split(" ")[1])
+				let pret_a = parseInt(p_a[p_a.length - 1].innerHTML.split(" ")[1]);
 				let p_b = b.getElementsByTagName("p");
-				let pret_b = parseInt(p_b[p_b.length - 1].innerHTML.split(" ")[1])
+				let pret_b = parseInt(p_b[p_b.length - 1].innerHTML.split(" ")[1]);
 				return pret_b - pret_a;
 			});
 		}

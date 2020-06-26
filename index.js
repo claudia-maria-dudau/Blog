@@ -53,7 +53,7 @@ app.post("/sign-up", function(req, res){
 		obUseri.nextId++;
 		obUseri.useri.push(userNou);
     	//opus parse
-		var jsonNou= JSON.stringify(obUseri)//opusul lui parse
+		var jsonNou= JSON.stringify(obUseri);//opusul lui parse
 		fs.writeFileSync("resurse/json/useri.json", jsonNou);
 		console.log("Utilizator nou inregistrat");
 		trimiteMail(userNou.email, userNou.username);
@@ -115,6 +115,67 @@ app.post('/login', function(req, res) {
 			res.render('html/404');
 		}
     });
+});
+
+//comentarii
+app.post('/blog1', function(req, res){
+	var fisCom = fs.readFileSync("resurse/json/com-blog1.json", "utf8");
+	var obCom = JSON.parse(fisCom);
+	var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files) {
+		var comNou = {
+			id: obCom.nextId, 
+			username: req.session.user.username,
+			text: fields.comentariu,
+			data: new Date()
+		}
+		obCom.nextId++;
+		obCom.comentarii.push(comNou);
+		console.log("Comentariu nou inregistrat");
+		var jsonNou = JSON.stringify(obCom);
+		fs.writeFileSync("resurse/json/com-blog1.json", jsonNou);
+		res.render('html/blog1',{username: req.session.user.username}); 
+	});
+});
+
+app.post('/blog2', function(req, res){
+	var fisCom = fs.readFileSync("resurse/json/com-blog2.json", "utf8");
+	var obCom = JSON.parse(fisCom);
+	var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files) {
+		var comNou = {
+			id: obCom.nextId, 
+			username: req.session.user.username,
+			text: fields.comentariu,
+			data: new Date()
+		}
+		obCom.nextId++;
+		obCom.comentarii.push(comNou);
+		console.log("Comentariu nou inregistrat");
+		var jsonNou = JSON.stringify(obCom);
+		fs.writeFileSync("resurse/json/com-blog2.json", jsonNou);
+		res.render('html/blog2',{username: req.session.user.username}); 
+	});
+});
+
+app.post('/blog3', function(req, res){
+	var fisCom = fs.readFileSync("resurse/json/com-blog3.json", "utf8");
+	var obCom = JSON.parse(fisCom);
+	var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files) {
+		var comNou = {
+			id: obCom.nextId, 
+			username: req.session.user.username,
+			text: fields.comentariu,
+			data: new Date()
+		}
+		obCom.nextId++;
+		obCom.comentarii.push(comNou);
+		console.log("Comentariu nou inregistrat");
+		var jsonNou = JSON.stringify(obCom);
+		fs.writeFileSync("resurse/json/com-blog3.json", jsonNou);
+		res.render('html/blog3',{username: req.session.user.username}); 
+	});
 });
 
 //log-out

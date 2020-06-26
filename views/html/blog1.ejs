@@ -56,6 +56,19 @@
 					Video cu Friptura mica
 				</video>
 			</div>
+
+			<!-- comentarii -->
+			<section>
+				<h2> Comentarii: </h2>
+				<div id = "comentarii">	</div>
+				<form id = "com" method = "post" action = "/blog1">
+				   <% if(locals.username) { %>
+						<label> Lasati un comentariu </label> </br>
+						<textarea name = "comentariu"> </textarea> </br>
+						<button type = "submit"> Posteaza </button>
+					<% } %>
+				</form>
+			</section>
 		</main>
 		
 		<footer>

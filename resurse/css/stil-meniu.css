@@ -182,6 +182,29 @@ img, video{
 	display: none;
 }
 
+/* formular comentarii */
+form#com{
+	margin-bottom: 9vh;
+}
+
+textarea{
+	width: 60vw;
+	height: 20vh;
+	font-family: "Century", sans-serif;
+	border-color: #403431;
+	border-radius: 5px;
+}
+
+textarea:focus{
+	box-shadow: #BF8468 5px 5px 10px ;
+}
+
+#com button{
+	margin-top: 1.2vh;
+	border-radius: 10px;
+	border-color: #403431;
+}
+
 /* ------------------------ responsive ------------------------ */
 /* large devices */
 @media screen and (min-width: 992px) and (max-width: 1058.98px){
