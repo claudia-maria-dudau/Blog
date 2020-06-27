@@ -11,7 +11,9 @@
 				</ol>
 			</li>
 			<li class = "left"> <a href = "/galerie">Galerie</a> </li>
-			<li class = "left"> <a href = "/merch">Merch</a> </li>
+			<% if(locals.username) { %>
+				<li class = "left"> <a href = "/merch">Merch</a> </li>
+			<% } %>
 			<li id = "sign-up" class = "right"> <a href = "/sign-up">  Sign up</a> </li>
 			<li id = "log-in" class = "right"> <i class = "fa fa-user-circle"></i> 
 				<% if(locals.username) { %> <%= locals.username %>

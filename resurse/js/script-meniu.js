@@ -68,7 +68,7 @@ function afis_com(pag){
 			}
     };
 	ajaxRequest.open("GET", "/json/comentarii.json", true);
-    ajaxRequest.send();
+    ajaxRequest.send(true);
 
     function afis(json_com, pag){
         let container = document.getElementById("comentarii");
@@ -78,8 +78,15 @@ function afis_com(pag){
                 textTemplate += ejs.render("<div class = 'comm'>\
                 <p><%= comment.username %> (la <%= comment.data.substring(0, 9) %>): </p>\
                 <p class = 'text_com'><%= comment.text %></p>\
-                <% if(locals.rol == 'admin') { %> <button class = 'sterg_com'> Sterge </buttton> <% } %>\
-                <form method = 'post'> <input type = 'text' name = 'nr_com' value = <%= comment.id %> <input type = 'text' name = 'nr_com' value = <%= comment.id %>><%= comment.plusuri %>  <button type = 'submit' formaction = 'plus'> + </button> <button type = 'submit' formaction = '/minus'> - </button> <%= comment.minusuri %></form>\
+                <form method = 'post'>\
+                    <% if(locals.rol == 'admin') { %>\
+                        <button type = 'sibmit' formaction = 'sterge-com'> Sterge </buttton>\
+                    <% } %>\
+                    <input type = 'text' name = 'nr_com' value = <%= comment.id %>\
+                    <input type = 'text' name = 'nr_com' value = <%= comment.id %>>\
+                    <%= comment.plusuri %>  <button type = 'submit' formaction = 'plus'> + </button>\
+                    <button type = 'submit' formaction = '/minus'> - </button> <%= comment.minusuri %>\
+                </form>\
                 </div>", 
                 {comment: json_com.comentarii[i]});
             }

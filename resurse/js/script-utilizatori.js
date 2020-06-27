@@ -26,7 +26,12 @@ window.onload = function(){
             <td><%= user.dataInreg %> </td>\
             <td><%= user.notificari %> </td>\
             <td><%= user.rol %> </td>\
-            <td class = 'sterg'><form method = 'post' action = 'sterge-util'> <input type = 'text' name = 'id' value = <%= user.id %>> <button type = 'submit'> Sterge </button> </form> </td>\
+            <td class = 'sterg'>\
+                <form method = 'post' action = 'sterge-util'>\
+                    <input type = 'text' name = 'id' value = <%= user.id %>>\
+                    <button type = 'submit'> Sterge </button>\
+                </form>\
+            </td>\
             </tr>", 
             {user: json_useri.useri[i]});
         }
