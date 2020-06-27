@@ -1,0 +1,42 @@
+/* layout */
+.sterg, form input{
+    display: none;
+}
+
+div#util{
+    overflow-x: auto;
+    margin-bottom: 9vh;
+}
+
+/* titlu */
+h1{
+	margin-top: 10.5vh;
+}
+
+/* tabel */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}  
+td, th {
+    border: 3px inset #704D46;
+    text-align: center;
+    padding: 7px;
+}
+
+thead tr{
+    background-color: #403431;
+}
+
+th{
+    font-variant: small-caps;
+    color: white;
+}
+  
+tbody tr:nth-child(even) {
+    background-color:  #BF8468;
+}
+
+tfoot td{
+    text-align: left;
+}

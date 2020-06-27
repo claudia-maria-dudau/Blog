@@ -17,7 +17,7 @@
         <script src = "/js/script-merch.js"></script>
         <script src = "/js/ejs.min.js"></script>
 		
-		<title> Sign up </title>
+		<title> Merch </title>
 	</head> 
 	
 	<body>
@@ -29,10 +29,11 @@
 			<div id = "sortare">
 				<form method = "post" action = "/merch">
 					<label> Pret: 
-						<select id = "sort" name = "pret">
-							<option value = "cresc" selected> crescator </option>
-							<option value = "desc"> descrescator </option>
-						</select>
+						<input type = "radio" name = "sort" value = "cresc">
+						<label> crescator </label>
+						<input type = "radio" name = "sort" value = "desc">
+						<label> descrescator </label>
+						<button id = "sort" type = "button"> Sortaza </button>
 					</label>
 					<label> Tip: 
 						<select id = "filt" name = "tip">
@@ -42,7 +43,11 @@
 							<option value = "distractie"> zi de distractie </option>
 						</select>
 					</label>
+
+					<button id = "res" type = "button"> Resetare </button>
 				</form>
+			</br>
+			<button id = "oferta" type = "button">Afiseaza Oferta Momentului</button>
 			</div>
             <!-- aici se va afisa continutul JSON-ului cu formatul din template-ul definit in script -->
             <div class = "afis" id = "afisTemplate"></div>

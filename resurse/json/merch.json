@@ -24,21 +24,21 @@
         "nume": "Tricou Model 1",
         "descriere": "Tricou cu poza lui Friptura imprimata",
         "marime": "XS/S/M/L/XL/XXL",
-        "material": "90% bumbat, 10% poliester",
+        "material": "90% bumbac, 10% poliester",
         "pret": "15 lei"
     },
     {
         "nume": "Tricou Model 2",
         "descriere": "Tricou cu poza lui Negru imprimata",
         "marime": "XS/S/M/L/XL/XXL",
-        "material": "90% bumbat, 10% poliester",
+        "material": "90% bumbac, 10% poliester",
         "pret": "15 lei"
     },
     {
         "nume": "Tricou Model 3",
         "descriere": "Tricou cu poza lui Friptura si Negru imprimata",
         "marime": "XS/S/M/L/XL/XXL",
-        "material": "90% bumbat, 10% poliester",
+        "material": "90% bumbac, 10% poliester",
         "pret": "22 lei"
     },
     {

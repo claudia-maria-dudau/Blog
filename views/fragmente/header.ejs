@@ -15,7 +15,14 @@
 			<li id = "sign-up" class = "right"> <a href = "/sign-up">  Sign up</a> </li>
 			<li id = "log-in" class = "right"> <i class = "fa fa-user-circle"></i> 
 				<% if(locals.username) { %> <%= locals.username %>
-					<div id = "btn"> <a href = "/logout"> Log out </a> </div>
+					<div id = "btn"> 
+						<ol>
+							<li> <a href = "/logout"> Log out </a> </li>
+							<li><% if(locals.rol == "admin") { %>
+						 			<a href = "/utilizatori"> Utilizatori </a> 
+								<% } %> </li>
+						</ol>
+					</div>
 				<% } else { %> Log in
 					<div id = "frm">
 						<form id = "form1" method = "post" action = "/login">

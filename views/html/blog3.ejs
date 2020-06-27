@@ -17,6 +17,7 @@
 
 		<script src = "/js/script-meniu.js"></script>
 		<script src = "/js/script-blog3.js"></script>
+		<script src = "/js/ejs.min.js"></script>
 		
 		<title> Hai la joaca </title>
 	</head> 
@@ -60,12 +61,13 @@
 
 			<!-- comentarii -->
 			<section>
-				<h2> Comentarii: </h2>
+				<h2> Comentarii: <button id = "btn_asc" type = "button"> Ascunde </button></h2>
 				<div id = "comentarii">	</div>
-				<form id = "com" method = "post" action = "/blog3">
+				<form id = "com" method = "post" action = "/comment">
 				   <% if(locals.username) { %>
-						<label> Lasati un comentariu </label> </br>
-						<textarea name = "comentariu"> </textarea> </br>
+					<input name = "pg" value = "3"> </input>
+						<label> Lasa un comentariu </label> </br>
+						<textarea name = "comentariu"></textarea> </br>
 						<button type = "submit"> Posteaza </button>
 					<% } %>
 				</form>

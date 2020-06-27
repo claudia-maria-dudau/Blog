@@ -22,6 +22,8 @@ window.onload = function(){
 					//document.getElementById("afisJson").innerHTML = this.responseText;
 					var obJson = JSON.parse(this.responseText);
 					afiseajaJsonTemplate(obJson);
+					selectare();
+					actualizare_stoc();
 			}
     };
     
@@ -49,6 +51,7 @@ window.onload = function(){
 					<p>Dimensiune: <%= merch.dimensiune %></p>\
 					<p>Material: <%= merch.material %></p>\
 					<p>Pret: <%= merch.pret %></p>\
+					<p>Stoc: </p>\
 					<button>Cumpara</button>\
 					</div>", 
 					{merch: obJson.merch[i]});
@@ -60,6 +63,7 @@ window.onload = function(){
 					<p>Marime: <%= merch.marime %></p>\
 					<p>Material: <%= merch.material %></p>\
 					<p>Pret: <%= merch.pret %></p>\
+					<p>Stoc: </p>\
 					<button>Cumpara</button>\
 					</div>", 
 					{merch: obJson.merch[i]});
@@ -69,6 +73,7 @@ window.onload = function(){
 					<p>Nume: <%= merch.nume %></p>\
 					<p>Descriere: <%= merch.descriere %></p>\
 					<p>Pret: <%= merch.pret %></p>\
+					<p>Stoc: </p>\
 					<button>Cumpara</button>\
 					</div>", 
 					{merch: obJson.merch[i]});
@@ -82,32 +87,46 @@ window.onload = function(){
 	//---------------- sortare/filtare ----------------
 	sel_sortare = document.getElementById("sort");
 	sel_filtrare = document.getElementById("filt");
+	sel_resetare = document.getElementById("res");
 	div_temp = document.getElementById("afisTemplate");
 	merch = document.getElementsByClassName("merch_temp");
 
-	sel_sortare.onchange = function(){
-		let merch1 = Array.prototype.slice.call(merch);
-		if(sel_sortare.options[sel_sortare.selectedIndex].value == "cresc"){
-			merch1.sort(function(a, b){
-				let p_a = a.getElementsByTagName("p");
-				let pret_a = parseInt(p_a[p_a.length - 1].innerHTML.split(" ")[1]);
-				let p_b = b.getElementsByTagName("p");
-				let pret_b = parseInt(p_b[p_b.length - 1].innerHTML.split(" ")[1]);
-				return pret_a - pret_b;
-			});
-		}
-		else{
-			merch1.sort(function(a, b){
-				let p_a = a.getElementsByTagName("p");
-				let pret_a = parseInt(p_a[p_a.length - 1].innerHTML.split(" ")[1]);
-				let p_b = b.getElementsByTagName("p");
-				let pret_b = parseInt(p_b[p_b.length - 1].innerHTML.split(" ")[1]);
-				return pret_b - pret_a;
-			});
+	sel_sortare.onclick = function(){
+		var opt = 0;
+		var sort = document.getElementsByName("sort")
+		for(let i = 0; i < sort.length; i++){
+			if(sort[i].checked){
+				opt = sort[i].value;
+				break;
+			}
 		}
 
-		for(let i = 0; i < merch1.length; i++)
-			div_temp.appendChild(merch1[i]);
+		if(opt == "cresc"){
+			let merch1 = Array.prototype.slice.call(merch);
+			merch1.sort(function(a, b){
+				let p_a = a.getElementsByTagName("p");
+				let pret_a = parseInt(p_a[p_a.length - 2].innerHTML.split(" ")[1]);
+				let p_b = b.getElementsByTagName("p");
+				let pret_b = parseInt(p_b[p_b.length - 2].innerHTML.split(" ")[1]);
+				return pret_a - pret_b;
+			});
+			for(let i = 0; i < merch1.length; i++)
+				div_temp.appendChild(merch1[i]);
+		}
+		else{
+			let merch1 = Array.prototype.slice.call(merch);
+			merch1.sort(function(a, b){
+				let p_a = a.getElementsByTagName("p");
+				let pret_a = parseInt(p_a[p_a.length - 2].innerHTML.split(" ")[1]);
+				let p_b = b.getElementsByTagName("p");
+				let pret_b = parseInt(p_b[p_b.length - 2].innerHTML.split(" ")[1]);
+				return pret_b - pret_a;
+			});
+			for(let i = 0; i < merch1.length; i++)
+				div_temp.appendChild(merch1[i]);
+		}
+
+		time_out();
 	}
 
 	sel_filtrare.onchange = function(){
@@ -138,6 +157,123 @@ window.onload = function(){
 				else
 					merch[i].classList.remove("ascunde");
 			}
+		}
+
+		time_out();
+	}
+
+	sel_resetare.onclick = resetare;
+	
+	function resetare(){
+		for(let i = 0; i < merch.length; i++)
+			merch[i].classList.remove("ascunde");
+		
+		let merch1 = Array.prototype.slice.call(merch);
+		merch1.sort(function(a, b){
+			let p_a = a.getElementsByTagName("p");
+			let nume_a = p_a[0].innerHTML.split(" ")[1];
+			let p_b = b.getElementsByTagName("p");
+			let nume_b = p_b[0].innerHTML.split(" ")[1];
+			return nume_a.localeCompare(nume_b);
+			});
+		for(let i = 0; i < merch1.length; i++)
+			div_temp.appendChild(merch1[i]);
+	}
+
+	function time_out(){
+		setTimeout(function(){
+			resetare();
+			alert("Aplicatia va fi resetata")
+		}, 12000);
+	}
+
+	//---------------- evenimente ----------------
+	function selectare(){
+		for(let i = 0; i < merch.length; i++){
+			merch[i].onclick = function(){
+				for(let j = 0; j < merch.length; j++){
+					if(merch[j] != this){
+						merch[j].classList.remove("selectat");
+						merch[j].getElementsByTagName("button")[0].classList.remove("selectat");
+					}
+				}
+
+				this.classList.toggle("selectat");
+				this.getElementsByTagName("button")[0].classList.toggle("selectat");
+			}
+		}
+	}
+
+	function actualizare_stoc(){
+		for(let m of merch){
+			let stoc = m.getElementsByTagName("p");
+			stoc = stoc[stoc.length - 1];
+			stoc.innerHTML = 'Stoc: ' + Math.floor(Math.random() * 30);
+		}
+
+		setInterval(function() {
+			for(let m of merch){
+				let stoc = m.getElementsByTagName("p");
+				stoc = stoc[stoc.length - 1];
+				stoc.innerHTML = 'Stoc: ' + Math.floor(Math.random() * 30);
+			}
+		}, 4000);
+	}
+
+	let btn_of = document.getElementById("oferta");
+	var div_of = document.createElement("div");
+	let cont = document.getElementById("sortare");
+	btn_of.onclick = function(){
+		if(this.innerHTML == "Afiseaza Oferta Momentului"){
+			//maresc nr de apasari
+			if(localStorage.nr_apas_of)
+				localStorage.nr_apas_of = parseInt(localStorage.nr_apas_of) + 1;
+			else
+				localStorage.nr_apas_of = 1;
+
+			//calculez minimul de produse din stoc la acel moment
+			let min = 31;
+			for(let m of merch){
+				let stoc = m.getElementsByTagName("p");
+				stoc = parseInt(stoc[stoc.length - 1].innerHTML.split(" ")[1]);
+				if(stoc < min && stoc != 0){
+					min = stoc;
+					var prod = m;
+				}
+			}
+
+			let p_prod = prod.getElementsByTagName("p");
+			let p_nume = document.createElement("p");
+			p_nume.innerHTML = p_prod[0].innerHTML;
+			div_of.appendChild(p_nume);
+			let p_pret = document.createElement("p");
+			let pret = parseInt(p_prod[p_prod.length - 2].innerHTML.split(" ")[1]);
+			p_pret.innerHTML = "Pret: ";
+			let s_pret = document.createElement("s");
+			s_pret.innerHTML = pret + " ";
+			p_pret.appendChild(s_pret);
+			p_pret.innerHTML += " " + pret - 0.15*pret + " lei (economisiti " + 0.15*pret + " lei)"
+			div_of.appendChild(p_pret);
+			let p_stoc = document.createElement("p");
+			p_stoc.innerHTML = p_prod[p_prod.length - 1].innerHTML;
+			div_of.appendChild(p_stoc);
+			div_of.classList.add("oferta");
+			let btn_of = document.createElement("button");
+			btn_of.type = "button";
+			btn_of.innerHTML = "Cumpara";
+			div_of.appendChild(btn_of);
+			cont.appendChild(div_of);
+
+			div_of.onclick = function(){
+				alert("Nr apasari pe oferta: " + localStorage.getItem("nr_apas_of"));
+			}
+
+			this.innerHTML = "Ascunde Oferta";
+		}
+		else{
+			div_of.innerHTML = "";
+			cont.removeChild(div_of);
+			this.innerHTML = "Afiseaza Oferta Momentului";
 		}
 	}
 }

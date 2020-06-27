@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "ro">
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "Postari din blog">
+		<meta name = "author" content = "Claudia D">
+		<meta name = "keywords" content = "blog, iepuri, postari">
+		<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+		
+		<link rel = "shortcut icon" type = "image/x-icon" href = "/media/favicon.ico">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-meniu.css">
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-utilizatori.css">
+		<link rel ="stylesheet" type = "text/css" href = "/css/stil-printare.css">
+
+		<script src = "/js/script-meniu.js"></script>
+        <script src = "/js/script-utilizatori.js"></script>
+        <script src = "/js/ejs.min.js"></script>
+		
+		<title> Urilizatori </title>
+	</head> 
+	
+	<body>
+		<%- include('../fragmente/header.ejs') %>
+		
+		<main>
+			<!-- titlu -->
+			<h1> Useri </h1>
+
+			<div id = "util">
+				<table>
+					<thead>
+						<tr>
+							<th> ID </th>
+							<th> Username </th>
+							<th> Email </th>
+							<th> Data inregistrare </th>
+							<th> Notificari </th>
+							<th> Rol </th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan = "6"> Nr utilizatori: </td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</main>
+
+		<%- include('../fragmente/footer1.ejs') %>
+	</body>
+</html>

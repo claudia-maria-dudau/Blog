@@ -62,7 +62,7 @@ app.post("/sign-up", function(req, res){
 		req.session.user = userNou; //setez userul ca proprietate a sesiunii
 		console.log("User conectat");
 		console.log(userNou);
-		res.render('html/signed-up',{username: req.session.user.username}); 
+		res.render('html/signed-up',{username: req.session.user.username, rol: req.session.user.rol}); 
 	});
 });
 
@@ -108,74 +108,13 @@ app.post('/login', function(req, res) {
             req.session.user = user; //setez userul ca proprietate a sesiunii
 			console.log("User conectat");
 			console.log(user);
-			res.render('html/postari',{username: req.session.user.username}); 
+			res.render('html/postari',{username: req.session.user.username, rol: req.session.user.rol}); 
 		}
 		else{
 			console.log("User inexistent");
 			res.render('html/404');
 		}
     });
-});
-
-//comentarii
-app.post('/blog1', function(req, res){
-	var fisCom = fs.readFileSync("resurse/json/com-blog1.json", "utf8");
-	var obCom = JSON.parse(fisCom);
-	var form = new formidable.IncomingForm();
-    form.parse(req, function(err, fields, files) {
-		var comNou = {
-			id: obCom.nextId, 
-			username: req.session.user.username,
-			text: fields.comentariu,
-			data: new Date()
-		}
-		obCom.nextId++;
-		obCom.comentarii.push(comNou);
-		console.log("Comentariu nou inregistrat");
-		var jsonNou = JSON.stringify(obCom);
-		fs.writeFileSync("resurse/json/com-blog1.json", jsonNou);
-		res.render('html/blog1',{username: req.session.user.username}); 
-	});
-});
-
-app.post('/blog2', function(req, res){
-	var fisCom = fs.readFileSync("resurse/json/com-blog2.json", "utf8");
-	var obCom = JSON.parse(fisCom);
-	var form = new formidable.IncomingForm();
-    form.parse(req, function(err, fields, files) {
-		var comNou = {
-			id: obCom.nextId, 
-			username: req.session.user.username,
-			text: fields.comentariu,
-			data: new Date()
-		}
-		obCom.nextId++;
-		obCom.comentarii.push(comNou);
-		console.log("Comentariu nou inregistrat");
-		var jsonNou = JSON.stringify(obCom);
-		fs.writeFileSync("resurse/json/com-blog2.json", jsonNou);
-		res.render('html/blog2',{username: req.session.user.username}); 
-	});
-});
-
-app.post('/blog3', function(req, res){
-	var fisCom = fs.readFileSync("resurse/json/com-blog3.json", "utf8");
-	var obCom = JSON.parse(fisCom);
-	var form = new formidable.IncomingForm();
-    form.parse(req, function(err, fields, files) {
-		var comNou = {
-			id: obCom.nextId, 
-			username: req.session.user.username,
-			text: fields.comentariu,
-			data: new Date()
-		}
-		obCom.nextId++;
-		obCom.comentarii.push(comNou);
-		console.log("Comentariu nou inregistrat");
-		var jsonNou = JSON.stringify(obCom);
-		fs.writeFileSync("resurse/json/com-blog3.json", jsonNou);
-		res.render('html/blog3',{username: req.session.user.username}); 
-	});
 });
 
 //log-out
@@ -185,19 +124,105 @@ app.get("/logout", function(req, res) {
 	res.redirect("/")
 });
 
+//stergere urilizatori
+app.post("/sterge-util", function(req, res){
+	console.log("/sterge-util");
+	var fisUseri = fs.readFileSync("resurse/json/useri.json", "utf8");
+	var obUseri = JSON.parse(fisUseri);
+	var form = new formidable.IncomingForm();
+	form.parse(req, function(err, fields, files){
+		for(var i = 0; i < obUseri.useri.length; i++){
+			if(parseInt(obUseri.useri[i].id) == parseInt(fields.id)){
+				obUseri.useri.splice(i, 1);
+				break;
+			}
+		}
+		var jsonNou = JSON.stringify(obUseri);
+		fs.writeFileSync("resurse/json/useri.json", jsonNou);
+		res.render('html/utilizatori', {username: req.session.user.username, rol: req.session.user.rol}); 
+	});
+});
+
+//comentarii
+app.post('/comment', function(req, res){
+	var fisCom = fs.readFileSync("resurse/json/comentarii.json", "utf8");
+	var obCom = JSON.parse(fisCom);
+	var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files) {
+		var comNou = {
+			id: obCom.nextId, 
+			pagina: fields.pg,
+			username: req.session.user.username,
+			text: fields.comentariu,
+			data: new Date(),
+			plusuri: 0,
+			minusuri: 0
+		}
+		obCom.nextId++;
+		obCom.comentarii.push(comNou);
+		console.log("Comentariu nou inregistrat");
+		var jsonNou = JSON.stringify(obCom);
+		fs.writeFileSync("resurse/json/comentarii.json", jsonNou);
+		res.render('html/blog' + fields.pg, {username: req.session.user.username, rol: req.session.user.rol}); 
+	});
+});
+
+//likeuri
+app.post("/plus", function(req, res){
+	console.log("/plus");
+	var fisCom = fs.readFileSync("resurse/json/comentarii.json", "utf8");
+	var obCom = JSON.parse(fisCom);
+	var form = new formidable.IncomingForm();
+	form.parse(req, function(err, fields, files){
+		for(var i = 0; i < obCom.comentarii.length; i++){
+			if(parseInt(obCom.comentarii[i].id) == parseInt(fields.nr_com)){
+				obCom.comentarii[i].plusuri++;
+				var pg = obCom.comentarii[i].pagina;
+				break;
+			}
+		}
+		var jsonNou = JSON.stringify(obCom);
+		fs.writeFileSync("resurse/json/comentarii.json", jsonNou);
+		res.render('html/blog' + pg, {username: req.session.user.username, rol: req.session.user.rol}); 
+	});
+});
+
+app.post("/minus", function(req, res){
+	console.log("/minus");
+	var fisCom = fs.readFileSync("resurse/json/comentarii.json", "utf8");
+	var obCom = JSON.parse(fisCom);
+	var form = new formidable.IncomingForm();
+	form.parse(req, function(err, fields, files){
+		for(var i = 0; i < obCom.comentarii.length; i++){
+			if(parseInt(obCom.comentarii[i].id) == parseInt(fields.nr_com)){
+				obCom.comentarii[i].minusuri++;
+				var pg = obCom.comentarii[i].pagina;
+				if(obCom.comentarii[i].minusuri > 5)
+					obCom.comentarii.splice(i, 1);
+				break;
+			}
+		}
+		var jsonNou = JSON.stringify(obCom);
+		fs.writeFileSync("resurse/json/comentarii.json", jsonNou);
+		res.render('html/blog' + pg, {username: req.session.user.username, rol: req.session.user.rol}); 
+	});
+});
+
 // ------ cereri de tip get ------
 app.get('/', function(req, res) {
 	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
 	console.log(req.url);
 	var numeUtiliz = req.session? (req.session.user? req.session.user.username : null) : null;
-    res.render('html/index', {username: numeUtiliz });
+	var rolUtiliz = req.session? (req.session.user? req.session.user.rol : null) : null;
+    res.render('html/index', {username: numeUtiliz, rol: rolUtiliz});
 });
 
 //app.get general
 app.get("/*", function(req,res){
 	console.log(req.url);// req.url --- "/pagina"
 	var numeUtiliz = req.session? (req.session.user? req.session.user.username : null) : null;
-    res.render('html' + req.url/*.replace(/\./g, "")*/, {username: numeUtiliz}, function(err, text_randat){
+	var rolUtiliz = req.session? (req.session.user? req.session.user.rol : null) : null;
+    res.render('html' + req.url/*.replace(/\./g, "")*/, {username: numeUtiliz, rol: rolUtiliz}, function(err, text_randat){
         //err e eventuala eroare; daca intra in callback la finalul randarii fara sa fi intalnit eroare atunci err este null
         //err.message contine textul erorii
         //text_randat este textul de dupa interpretarea template-ului
@@ -206,7 +231,7 @@ app.get("/*", function(req,res){
         if(err){
 			if(err.message.includes('Failed to lookup view')){
 			 	console.log("/404");
-			    return res.status(404).render("html/404",  {username: numeUtiliz});
+			    return res.status(404).render("html/404",  {username: numeUtiliz, rol: rolUtiliz});
 			}
             else
 				throw err;

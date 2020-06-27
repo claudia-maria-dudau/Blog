@@ -8,7 +8,7 @@ nav{
 	font-variant: small-caps;
 }
 
-ol#meniu, ol#submeniu, #log-in div{
+ol#meniu, ol#submeniu, #log-in div, #btn ol{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -16,7 +16,7 @@ ol#meniu, ol#submeniu, #log-in div{
 	background-color: #704D46;
 }
 
-ol#meniu>li>a, #submeniu>li>a, #log-in, #log-in div, #btn a{
+ol#meniu>li>a, #submeniu>li>a, #log-in, #log-in form, #btn a{
 	display: block;
 	overflow: hidden;
 	color: white;
@@ -25,11 +25,7 @@ ol#meniu>li>a, #submeniu>li>a, #log-in, #log-in div, #btn a{
 	text-decoration: none;
 }
 
-#btn a{
-	display: initial;
-}
-
-li, #btn{
+li, #btn li{
 	transition: background-color 1s;
 }
 
@@ -51,7 +47,7 @@ li.right{
 	float: right;
 }
 
-li:hover, #btn:hover{
+li:hover, #btn li:hover{
 	background-color: #403431;
 }
 
@@ -178,8 +174,43 @@ img, video{
 	transition: all 1s linear;
 }
 
-.ascunde{
+/* comentarii */
+.comm{
+    margin: 4.5vh 2vw;
+    padding: 5px 15px;
+    background: rgb(206, 164, 146);
+	box-shadow: 5px 10px #704D46;
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+}
+
+div.comm:last-child{
+    margin-bottom: 8vh;
+}
+
+div.comm p{
+	margin-top: 0px;
+}
+
+div.comm p:first-child{
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: larger;
+	margin-top: 7px;
+}
+
+div.comm form{
+	align-self: flex-end;
+}
+
+div.comm form input{
 	display: none;
+}
+
+#btn_asc{
+	border-radius: 10px;
+	border-color: #403431;
 }
 
 /* formular comentarii */
@@ -193,6 +224,7 @@ textarea{
 	font-family: "Century", sans-serif;
 	border-color: #403431;
 	border-radius: 5px;
+	margin-top: 1.2vh;
 }
 
 textarea:focus{
@@ -203,6 +235,14 @@ textarea:focus{
 	margin-top: 1.2vh;
 	border-radius: 10px;
 	border-color: #403431;
+}
+
+#com input{
+	display: none;
+}
+
+.ascunde{
+	display: none;
 }
 
 /* ------------------------ responsive ------------------------ */
