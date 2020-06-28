@@ -1,3 +1,4 @@
+//---------------- aliniere meniu ----------------
 function align_menu(){
     //---------------- meniu ----------------
     let div_login = document.querySelector("#log-in div");
@@ -14,6 +15,7 @@ function align_menu(){
     });
 }
 
+//---------------- ascundere imagini ----------------
 function ascundere_img(){
     let btn = document.getElementById("asc");
     btn.onclick = function(){
@@ -36,11 +38,16 @@ function ascundere_img(){
     }
 }
 
+//---------------- marcare pagina curenta ----------------
 function marcare_pg(){
     adr = window.location.href.split("/");
     adr_curenta = adr[adr.length - 1];
     meniu = document.getElementsByTagName("nav")[0];
     a = meniu.getElementsByTagName("a");
+    if(adr_curenta == ""){
+        let acasa = meniu.getElementsByTagName("a")[0];
+        acasa.parentNode.classList.add("curent");
+    }
     
     for(let i = 0; i < a.length; i++){
         a_adr = a[i].href.split("/");
@@ -51,6 +58,7 @@ function marcare_pg(){
     }
 }
 
+//---------------- nr cuvinte pagina ----------------
 function nr_cuv(){
     let body = document.getElementsByTagName("body")[0];
     var text = body.innerText.split(" ");
@@ -58,6 +66,7 @@ function nr_cuv(){
     nr_cuv.innerHTML += text.length;
 }
 
+//---------------- comentarii ----------------
 function afis_com(pag){
     //---------------- template comentarii ----------------
     var ajaxRequest = new XMLHttpRequest();
